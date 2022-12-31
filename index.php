@@ -22,42 +22,45 @@ include('config.php'); //Set up database connection...
 <!DOCTYPE html>
 
 <head>
-<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"-->
+	<title>Student Page</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 
 <body>
 
-    <!-- Navbar for profile and admission -->
-
-    <!--nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="abc.php">Features</a>
-    </div>
-  </div>
-</nav-->
-
-    <!-- Navigation end -->
-
+<div class="container">
+<a href="#"><img src="#" alt="" width="350px" ></a><br><hr>
+<a href="logout.php" class="btn btn-success"><i class="fa fa-lock"></i> Logout</a>
+<a href="register_student.php" class="btn btn-success"><i class="fa fa-lock"></i> Admission Form</a>
+<a href="export.php" class="btn btn-success pull-right"><i class="fa fa-download"></i> Export Data</a>
+<hr>
 
 
     <!-- View modal  -->
 <?php 
 
+//echo $_SESSION['username'];
+//echo "<br>";
+//echo $_SESSION['id'];
+
 // <!-- profile modal start -->
-$get_data = "SELECT * FROM student_data where u_card='ABCD12345677'";
+$get_data = "SELECT * FROM student_data where u_f_name='".$_SESSION['username']."'";
 $run_data = mysqli_query($con,$get_data);
+
 
 while($row = mysqli_fetch_array($run_data))
 {
 	$id = $row['id'];
+    echo $id."<br>";
+    echo $_SESSION['id'];
 	$card = $row['u_card'];
 	$name = $row['u_f_name'];
 	$name2 = $row['u_l_name'];
@@ -79,70 +82,23 @@ while($row = mysqli_fetch_array($run_data))
 	
 	$image = $row['image'];
 	echo "
-
-		<div class='modal fade' id='view$id' tabindex='-1' role='dialog' aria-labelledby='userViewModalLabel' aria-hidden='true'>
-		<div class='modal-dialog'>
-			<div class='modal-content'>
-			<div class='modal-header'>
-				<h1 class='modal-title' id='exampleModalLabel'>Student Profile <i class='fa fa-user-circle-o' aria-hidden='true'></i></h1>
-				<!--button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-				<span aria-hidden='true'>&times;</span>
-				</button-->
-			</div>
-			<div class='modal-body'>
-			<div class='container' id='profile'> 
-				<div class='row'>
-					<div class='col-sm-4 col-md-2'>
-						<img src='upload_images/$image' alt='' style='width: 150px; height: 150px;' ><br>
+        <h1>$name</h1>
 		
-						<i class='fa fa-id-card' aria-hidden='true'></i> $card<br>
-						<i class='fa fa-phone' aria-hidden='true'></i> $phone  <br>
-						Issue Date : $time
-					</div>
-					<div class='col-sm-3 col-md-6'>
-						<h3 class='text-primary'>$name $name2</h3>
-						<p class='text-secondary'>
-						<strong>S/O :</strong> $father <br>
-						<strong>M/O :</strong>$mother <br>
-						<strong>Aadhar :</strong> $aadhar <br>
-						<i class='fa fa-venus-mars' aria-hidden='true'></i> $gender
-						<br />
-						<i class='fa fa-envelope-o' aria-hidden='true'></i> $email
-						<br />
-						<div class='card' style='width: 18rem;'>
-						<i class='fa fa-users' aria-hidden='true'></i> Familiy :
-								<div class='card-body'>
-								<p> $family </p>
-								</div>
-						</div>
-						
-						<i class='fa fa-home' aria-hidden='true'> Address : </i> $village, $police, <br> $dist, $state - $pincode
-						<br />
-						</p>
-						<!-- Split button -->
-					</div>
-				</div>
-
-			</div>   
-			</div>
-			<!--div class='modal-footer'>
-				<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-			</div-->
-			</form>
-			</div>
-		</div>
-		</div> 
 
 
     ";
+    /*
+    echo $id,$name."
+        &nbsp;
+    ".$card."<br><hr>";
 }
+*/
 
 
 // <!-- profile modal end -->
 
-
+}
 ?>
 
 </body>
-
 </html>
