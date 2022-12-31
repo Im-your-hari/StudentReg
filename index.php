@@ -57,49 +57,11 @@ include('config.php'); //Set up database connection...
 $get_data = "SELECT * FROM admission_data where username='".$_SESSION['username']."'";
 $run_data = mysqli_query($con,$get_data);
 
-//echo $run_data['username'];
-while($row = mysqli_fetch_array($run_data))
-{
-	/*$id = $row['id'];
-    echo $id."<br>";
-    echo $_SESSION['id'];
-	$card = $row['u_card'];*/
-	$name = $row['username'];/*
-	$name2 = $row['u_l_name'];
-	$father = $row['u_father'];
-	$mother = $row['u_mother'];
-	$gender = $row['u_gender'];
-	$email = $row['u_email'];
-	$aadhar = $row['u_aadhar'];
-	$Bday = $row['u_birthday'];
-	$family = $row['u_family'];
-	$phone = $row['u_phone'];
-	$address = $row['u_state'];
-	$village = $row['u_village'];
-	$police = $row['u_police'];
-	$dist = $row['u_dist'];
-	$pincode = $row['u_pincode'];
-	$state = $row['u_state'];
-	$time = $row['uploaded'];
-	
-	$image = $row['image'];*/
-	//echo "
-    //    <h1>$name</h1>
-		
-
-
-    //";
-    /*
-    echo $id,$name."
-        &nbsp;
-    ".$card."<br><hr>";
-}
-*/
-
-
-// <!-- profile modal end -->
-
-}
+$row = mysqli_fetch_array($run_data);
+echo $row["username"]."<br>";
+echo $row["name"]."<br>";
+echo $row["age"]."<br>";
+echo $row["dob"]."<br>";
 ?>
 
 </body>
