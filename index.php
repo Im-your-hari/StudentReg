@@ -58,10 +58,10 @@ $get_data = "SELECT * FROM admission_data where username='".$_SESSION['username'
 $run_data = mysqli_query($con,$get_data);
 
 $row = mysqli_fetch_array($run_data);
-echo $row["username"]."<br>";
-echo $row["name"]."<br>";
-echo $row["age"]."<br>";
-echo $row["dob"]."<br>";
+echo "<h1>Username :: ".$row["username"]."</h1><br>";
+echo "<h1>Name :: ".$row["name"]."</h1><br>";
+echo "<h1>Age :: ".$row["age"]."</h1><br>";
+echo "<h1>DoB :: ".$row["dob"]."</h1><br>";
 ?>
 
 </body>
