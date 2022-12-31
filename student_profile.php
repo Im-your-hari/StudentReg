@@ -26,7 +26,9 @@
         echo "Success";
         header("location:index.php");
       }else{
-        echo "Failed";
+        echo "You've already registered...";
+        //header("location:index.php");
+        
       }
       //header("location:index.php");
 ?>

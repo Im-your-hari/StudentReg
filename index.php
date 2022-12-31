@@ -47,22 +47,24 @@ include('config.php'); //Set up database connection...
     <!-- View modal  -->
 <?php 
 
+
+
 //echo $_SESSION['username'];
 //echo "<br>";
 //echo $_SESSION['id'];
 
 // <!-- profile modal start -->
-$get_data = "SELECT * FROM student_data where u_f_name='".$_SESSION['username']."'";
+$get_data = "SELECT * FROM admission_data where username='".$_SESSION['username']."'";
 $run_data = mysqli_query($con,$get_data);
 
-
+//echo $run_data['username'];
 while($row = mysqli_fetch_array($run_data))
 {
-	$id = $row['id'];
+	/*$id = $row['id'];
     echo $id."<br>";
     echo $_SESSION['id'];
-	$card = $row['u_card'];
-	$name = $row['u_f_name'];
+	$card = $row['u_card'];*/
+	$name = $row['username'];/*
 	$name2 = $row['u_l_name'];
 	$father = $row['u_father'];
 	$mother = $row['u_mother'];
@@ -80,13 +82,13 @@ while($row = mysqli_fetch_array($run_data))
 	$state = $row['u_state'];
 	$time = $row['uploaded'];
 	
-	$image = $row['image'];
-	echo "
-        <h1>$name</h1>
+	$image = $row['image'];*/
+	//echo "
+    //    <h1>$name</h1>
 		
 
 
-    ";
+    //";
     /*
     echo $id,$name."
         &nbsp;
