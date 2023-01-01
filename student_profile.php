@@ -1,4 +1,4 @@
-<?php error_reporting (E_ALL ^ E_NOTICE); ?> 
+<?php error_reporting (E_ALL ^ E_NOTICE ^ E_WARNING); ?> 
 
 <?php
 
@@ -19,10 +19,16 @@
       $std_name = $_POST["std_name"];
       $std_age = $_POST["std_age"];
       $std_dob = $_POST["std_dob"];
+      $std_image = $_POST["std_image"];
+      $file = $_FILES["std_image"]["name"];
 
-      $query = "insert into admission_data values('$user_name','$std_name','$std_age','$std_dob')";
+
+
+
+      $query = "insert into admission_data values('$user_name','$std_name','$std_age','$std_dob','$file')";
       $avi = mysqli_query($con,$query);
       if($avi) {
+        move_uploaded_file($_FILES['std_image']['tmp_name'],"./images/$file");
         echo "Success";
         header("location:index.php");
       }else{

@@ -1,3 +1,4 @@
+<?php error_reporting (E_ALL ^ E_NOTICE ^ E_WARNING); ?> 
 <?php
 
 session_start();
@@ -62,6 +63,7 @@ echo "<h1>Username :: ".$row["username"]."</h1><br>";
 echo "<h1>Name :: ".$row["name"]."</h1><br>";
 echo "<h1>Age :: ".$row["age"]."</h1><br>";
 echo "<h1>DoB :: ".$row["dob"]."</h1><br>";
+echo "<h1>Image :: ".$row["image"]."</h1><br>";
 ?>
 
 </body>
