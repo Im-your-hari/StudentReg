@@ -12,6 +12,8 @@
     $content .= "<h1>Name :: ".$row["name"]."</h1><br>";
     $content .= "<h1>Age :: ".$row["age"]."</h1><br>";
     $content .= "<h1>DoB :: ".$row["dob"]."</h1><br>";
+    //$content .= "<h1>Image :: ".$row["image"]."</h1><br>";
+    $content .= "<img src='images/".$row["image"]."'><br>";
 
 
     
