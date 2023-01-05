@@ -16,6 +16,7 @@
       require_once "config.php";
       //include("config.php");
 
+      
       //Data only
       $std_name = $_POST["std_name"];
       //$std_age = $_POST["std_age"];
