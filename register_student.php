@@ -1,6 +1,6 @@
 
 
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html>
 
 <body>
@@ -14,7 +14,7 @@
       </form>
 </body>
 
-</html>
+</html-->
 
 <!--Form Template-->
 <!DOCTYPE html>
@@ -49,6 +49,7 @@ rel="stylesheet"
               <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                  
                   <form action="student_profile.php" method="post" enctype="multipart/form-data">
       
                     <div class="row">
@@ -63,7 +64,7 @@ rel="stylesheet"
                       <div class="col-md-6 mb-4 d-flex align-items-center">
       
                         <div class="form-outline datepicker w-100">
-                          <input type="date" name="DoB" class="form-control form-control-lg" id="birthdayDate"/>
+                          <input type="date" name="std_dob" class="form-control form-control-lg" id="birthdayDate"/>
                           <label for="birthdayDate" class="form-label">Birthday</label>
                         </div>
       
@@ -73,19 +74,19 @@ rel="stylesheet"
                         <h6 class="mb-2 pb-1">Gender: </h6>
       
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Gender" id="femaleGender"
+                          <input class="form-check-input" type="radio" name="std_gender" id="femaleGender"
                             value="option1" checked />
                           <label class="form-check-label" for="femaleGender">Female</label>
                         </div>
       
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Gender" id="maleGender"
+                          <input class="form-check-input" type="radio" name="std_gender" id="maleGender"
                             value="option2" />
                           <label class="form-check-label" for="maleGender">Male</label>
                         </div>
       
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="Gender" id="otherGender"
+                          <input class="form-check-input" type="radio" name="std_gender" id="otherGender"
                             value="option3" />
                           <label class="form-check-label" for="otherGender">Other</label>
                         </div>
@@ -97,7 +98,7 @@ rel="stylesheet"
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                          <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" />
+                          <input type="email" name="std_email" id="emailAddress" class="form-control form-control-lg" />
                           <label class="form-label" for="emailAddress">Email</label>
                         </div>
       
@@ -105,7 +106,7 @@ rel="stylesheet"
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                          <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control form-control-lg" />
+                          <input type="tel" name="std_phoneNumber" id="phoneNumber" class="form-control form-control-lg" />
                           <label class="form-label" for="phoneNumber">Phone Number</label>
                         </div>
       
@@ -117,7 +118,7 @@ rel="stylesheet"
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="text" name="nation" id="Nationality" class="form-control form-control-lg" />
+                            <input type="text" name="nationality" id="Nationality" class="form-control form-control-lg" />
                             <label class="form-label" for="Nationality">Nationality</label>
                           </div>
         
@@ -125,7 +126,7 @@ rel="stylesheet"
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="text" name="status" id="Marital-Status" class="form-control form-control-lg" />
+                            <input type="text" name="mstatus" id="Marital-Status" class="form-control form-control-lg" />
                             <label class="form-label" for="Marital-Status">Marital Status</label>
                           </div>
         
@@ -194,7 +195,7 @@ rel="stylesheet"
                         <div class="col-md-6 mb-4 pb-2">
         
                           <div class="form-outline">
-                            <input type="address" name="p-Address" id="PAddress" class="form-control form-control-lg" />
+                            <input type="address" name="p-address" id="PAddress" class="form-control form-control-lg" />
                             <label class="form-label" for="PAddress">Permanent Address</label>
                           </div>
         
@@ -224,7 +225,7 @@ rel="stylesheet"
                         <div class="col-md-6 mb-4 pb-2">
 
                           <div class="form-outline">
-                            <input type="text" name="a-Rank" id="A-Rank" class="form-control form-control-lg" />
+                            <input type="text" name="a-rank" id="A-Rank" class="form-control form-control-lg" />
                             <label class="form-label" for="A-Rank">Ayurveda Rank</label>
                           </div>
                         </div>
@@ -249,7 +250,7 @@ rel="stylesheet"
 
                         <div class="col-md-6 mb-4 pb-2">
                           <div class="form-outline">
-                            <input type="text" name="percentile-score" id="Percentile-score" class="form-control form-control-lg" />
+                            <input type="text" name="percentile" id="Percentile-score" class="form-control form-control-lg" />
                             <label class="form-label" for="Percentile-score">Percentile Score</label>
                           </div>
                         </div>
@@ -284,7 +285,7 @@ rel="stylesheet"
 
                         <div class="col-md-6 mb-4 pb-2">
                           <div class="form-outline">
-                            <input type="text" name="Extra-Activities" id="Extra-Activities" class="form-control form-control-lg" />
+                            <input type="text" name="extra-activities" id="Extra-Activities" class="form-control form-control-lg" />
                             <label class="form-label" for="Extra-Activities">Extra Curricular Activities</label>
                           </div>
                         </div>
@@ -295,14 +296,14 @@ rel="stylesheet"
 
                           <div class="form-outline">
                             <label for="Student Signature" class="form-label">Student Signature</label>
-                            <input class="form-control" type="file" id="Student Signature" disabled />
+                            <input class="form-control" type="file" name="s-sign" id="Student Signature" disabled />
                           </div>
                         </div>
 
                         <div class="col-md-6 mb-4 pb-2">
                             <div class="form-outline">
                               <label for="Guadian-sign" class="form-label">Guadian Signature</label>
-                              <input class="form-control" type="file" id="Guadian-sign" disabled />
+                              <input class="form-control" type="file" name="g-sign" id="Guadian-sign" disabled />
                             </div>
                           </div>
                     </div>
@@ -313,14 +314,14 @@ rel="stylesheet"
 
                           <div class="form-outline">
                             <label for="NEET" class="form-label">NEET Application</label>
-                            <input class="form-control" type="file" id="NEET" disabled />
+                            <input class="form-control" type="file" name="neet-file" id="NEET" disabled />
                           </div>
                         </div>
 
                         <div class="col-md-6 mb-4 pb-2">
                             <div class="form-outline">
                               <label for="+2" class="form-label">Higher Secondary Certificate</label>
-                              <input class="form-control" type="file" id="+2" disabled />
+                              <input class="form-control" type="file" name="hs-file" id="+2" disabled />
                             </div>
                           </div>
                     </div>
