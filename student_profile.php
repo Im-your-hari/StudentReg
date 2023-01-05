@@ -16,7 +16,7 @@
       require_once "config.php";
       //include("config.php");
 
-      
+
       //Data only
       $std_name = $_POST["std_name"];
       //$std_age = $_POST["std_age"];
@@ -43,7 +43,7 @@
       $isSanskrit = $_POST["isSanskrit"];
       $isAyurvedic = $_POST["isAyurvedic"];
       $extra_activities = $_POST["extra-activities"];
-      
+      //'$address','$p_address','$k_rank','$k_roll','$a_rank','$n_roll','$n_rank','$percentile','$plustwo_marks','$isSanskrit','$isAyurvedic','$extra_activities'
 
 
       //File Data
@@ -62,7 +62,7 @@
 
 
       //Need to add data in the order of database...
-      $query = "insert into admission_data values('$user_name','$std_name','$std_age','$std_dob','$img_file')";
+      $query = "insert into admission_data values('$user_name','$std_name','$std_dob','$img_file','$std_gender','$std_email','$std_phoneNumber','$nationality','$mstatus','$caste','$m_tongue','$guadian','$r_w_Student','$category','$address','$p_address','$k_rank','$k_roll','$a_rank','$n_roll','$n_rank','$percentile','$plustwo_marks','$isSanskrit','$isAyurvedic','$extra_activities','$s_sign_file','$g_sign_file',' $neet_file_img',' $hs_file_img')";
       $avi = mysqli_query($con,$query);
       if($avi) {
         move_uploaded_file($_FILES['std_image']['tmp_name'],"./images/$img_file");

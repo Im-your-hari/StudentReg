@@ -49,7 +49,7 @@ rel="stylesheet"
               <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-                  
+
                   <form action="student_profile.php" method="post" enctype="multipart/form-data">
       
                     <div class="row">
@@ -296,14 +296,14 @@ rel="stylesheet"
 
                           <div class="form-outline">
                             <label for="Student Signature" class="form-label">Student Signature</label>
-                            <input class="form-control" type="file" name="s-sign" id="Student Signature" disabled />
+                            <input class="form-control" type="file" name="s-sign" id="Student Signature"  />
                           </div>
                         </div>
 
                         <div class="col-md-6 mb-4 pb-2">
                             <div class="form-outline">
                               <label for="Guadian-sign" class="form-label">Guadian Signature</label>
-                              <input class="form-control" type="file" name="g-sign" id="Guadian-sign" disabled />
+                              <input class="form-control" type="file" name="g-sign" id="Guadian-sign"  />
                             </div>
                           </div>
                     </div>
@@ -314,14 +314,14 @@ rel="stylesheet"
 
                           <div class="form-outline">
                             <label for="NEET" class="form-label">NEET Application</label>
-                            <input class="form-control" type="file" name="neet-file" id="NEET" disabled />
+                            <input class="form-control" type="file" name="neet-file" id="NEET"  />
                           </div>
                         </div>
 
                         <div class="col-md-6 mb-4 pb-2">
                             <div class="form-outline">
                               <label for="+2" class="form-label">Higher Secondary Certificate</label>
-                              <input class="form-control" type="file" name="hs-file" id="+2" disabled />
+                              <input class="form-control" type="file" name="hs-file" id="+2"  />
                             </div>
                           </div>
                     </div>
