@@ -53,7 +53,7 @@ rel="stylesheet"
                   <form action="student_profile.php" method="post" enctype="multipart/form-data">
       
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 p-2 ">
                           <div class="form-outline">
                               <input type="Name" name="std_name" id="std_name" class="form-control form-control-lg" />
                               <label class="form-label" for="std_name">Name</label>
@@ -290,6 +290,15 @@ rel="stylesheet"
                           </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-12 p-2">
+
+                          <div class="form-outline ">
+                            <label for="Student Image" class="form-label">Student Image</label>
+                            <input class="form-control" type="file" name="s-image" id="Student Image"  />
+                          </div>
+                        </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-4 pb-2">
