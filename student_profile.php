@@ -23,7 +23,7 @@
       $std_dob = $_POST["std_dob"];
       $std_gender = $_POST["std_gender"];
       $std_email = $_POST["std_email"];
-      $std_phoneNumber = $_POST["std_phone_number"];
+      $std_phoneNumber = $_POST["std_phoneNumber"];
       $nationality = $_POST["nationality"];
       $mstatus = $_POST["mstatus"];
       $caste = $_POST["caste"];
