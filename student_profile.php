@@ -21,6 +21,7 @@
       $std_name = $_POST["std_name"];
       //$std_age = $_POST["std_age"];
       $std_dob = $_POST["std_dob"];
+      $std_image = $_POST["s-image"];
       $std_gender = $_POST["std_gender"];
       $std_email = $_POST["std_email"];
       $std_phoneNumber = $_POST["std_phoneNumber"];
@@ -47,14 +48,14 @@
 
 
       //File Data
-      $std_image = $_POST["std_image"];
+      $std_image = $_POST["s-image"];
       $s_sign = $_POST["s-sign"];
       $g_sign = $_POST["g-sign"];
       $neet_file = $_POST["neet-file"];
       $hs_file = $_POST["hs-file"];
 
       //Files
-      $img_file = $_FILES["std_image"]["name"];
+      $img_file = $_FILES["s-image"]["name"];
       $s_sign_file = $_FILES["s-sign"]["name"];
       $g_sign_file = $_FILES["g-sign"]["name"];
       $neet_file_img = $_FILES["neet-file"]["name"];
@@ -65,7 +66,7 @@
       $query = "insert into admission_data values('$user_name','$std_name','$std_dob','$img_file','$std_gender','$std_email','$std_phoneNumber','$nationality','$mstatus','$caste','$m_tongue','$guadian','$r_w_Student','$category','$address','$p_address','$k_rank','$k_roll','$a_rank','$n_roll','$n_rank','$percentile','$plustwo_marks','$isSanskrit','$isAyurvedic','$extra_activities','$s_sign_file','$g_sign_file',' $neet_file_img',' $hs_file_img')";
       $avi = mysqli_query($con,$query);
       if($avi) {
-        move_uploaded_file($_FILES['std_image']['tmp_name'],"./images/$img_file");
+        move_uploaded_file($_FILES['s-image']['tmp_name'],"./images/$img_file");
         move_uploaded_file($_FILES['s-sign']['tmp_name'],"./stdsign/$s_sign_file");
         move_uploaded_file($_FILES['g-sign']['tmp_name'],"./gdsign/$g_sign_file");
         move_uploaded_file($_FILES['neet-file']['tmp_name'],"./neet/$neet_file_img");

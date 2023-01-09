@@ -45,7 +45,8 @@ while($row = mysqli_fetch_array($run_data)){
             <th scope="."row"."".">".$i."</th>
             <td>NANG1202</td>
             <td>".$row['name']."</td>
-            <td><a href="."index.php"."><button class="."btn-success"." name="."application".">Application</button></a></td>
+            <td>".$row['username']."</td>
+            <td><a href="."student_documents.php?username=".$row['username'].""."><button class="."btn-success"." name="."application".">Application</button></a></td>
           </tr>";
     
 

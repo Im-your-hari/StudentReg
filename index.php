@@ -91,7 +91,7 @@ echo "<section style="."background-color: #eee;".">
     <div class="."col-lg-4".">
       <div class="."card mb-4".">
         <div class="."card-body text-center".">
-          <img src="."./images/IMG_20220415_124841_001.jpg" ."
+          <img src="."./images/".$row["image"]."" ."
             class="."rounded-circle img-fluid" ."style="."width: 150px; height=150px".">
           <h4 class="."my-3".">".$row["name"]."</h4>
           <p class="."text-muted mb-4".">@".$_SESSION["username"]."</p>
