@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-
-<head>
-	<title>Student Page</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Font Awesome -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
-    rel="stylesheet"
-    />
-</head>
-
 
 <?php
 
@@ -123,13 +91,124 @@
       </div>
     </div>
     </section></body>";*/
-    $content = "";
+    $content = "<img src="."nangelil.png".">";
+    //$content = "<center><img src="."clg.png"." style="."justify-content: center;"." height="."100"." width="."120"."><b>Nangelil Ayurveda Medical College Amano Kothamangalamm Nellikuzhi P.o., Ernakulam Dist Kerala State, India, PIN. 686691<br> Affiliated to Kerala University of Health Sciences, Thrissur Phone : O91 485 2822032, Principal +91 485 2817700, 0484-2978444, <br> Fax: 91 485 2822032 Email: nangelicollege@gmail.com/ collegedu@gmail.com, Website: www.nangelilayurvedamedicalcollege.org</b></center>";
+    //$content = "<h1>Hai</h1>";
+    $content .="<center><table border=1>";
+    $content .="<tr> 
+    <td>Application No</td>
+    <td>10023</td>
+</tr>
+<tr>
+    <td>Student Registration Id</td>
+    </td>
+     <td>2002-03-29</td>
+</tr>
+<tr>
+   <td> Student Name</td>
+     <td>".$row["name"]."</td>
+</tr>
+<tr>
+    <td>Date Of Birth</td>
+    <td>".$row["dob"]."</td>
+</tr>
+
+<tr><td>Phone Number</td>
+    <td>".$row["phone"]."</td>
+</tr>
+
+<tr><td>Email</td>
+    <td>".$row["email"]."</td>
+</tr>
+
+
+
+
+
+<tr><td>Nationality &nbsp;&nbsp;</td>
+    <td>".$row["nationality"]."</td>
+</tr>
+
+<tr><td>Marital Status &nbsp;&nbsp;</td>
+    <td>".$row["mstatus"]."</td>
+</tr>
+
+<tr><td> Religion & Caste&nbsp;&nbsp;</td>
+    <td>".$row["caste"]."</td>
+</tr>
+
+<tr><td>Mother Tongue&nbsp;&nbsp;</td>
+    <td>".$row["mtongue"]."</td>
+</tr>
+
+<tr><td>Name of Guadian&nbsp;&nbsp;</td>
+    <td>".$row["guadian"]."</td>
+</tr>
+
+<tr><td>Relation with Student&nbsp;&nbsp;</td>
+    <td>".$row["relation"]."</td>
+</tr>
+
+<tr><td>Belongs to SC/ST/OBC&nbsp;&nbsp;</td>
+    <td>".$row["category"]."</td>
+</tr>
+
+<tr><td>Address&nbsp;&nbsp;</td>
+    <td>".$row["address"]."</td>
+</tr>
+<tr><td>Permanent Address&nbsp;&nbsp;</td>
+    <td>".$row["address"]."</td>
+</tr>
+
+<tr><td>KEAM Medical Rank&nbsp;&nbsp;</td>
+    <td>".$row["k-rank"]."</td>
+</tr>
+
+<tr><td>KEAM Roll no&nbsp;&nbsp;</td>
+    <td>".$row["k-roll"]."</td>
+</tr>
+
+<tr><td>Ayurveda Rank&nbsp;&nbsp;</td>
+    <td>".$row["a-rank"]."</td>
+</tr>
+
+<tr><td>NEET Roll no&nbsp;&nbsp;</td>
+    <td>".$row["n-roll"]."</td>
+</tr>
+
+<tr><td>NEET Rank&nbsp;&nbsp;</td>
+    <td>".$row["n-rank"]."</td>
+</tr>
+
+<tr><td>Percentile Score&nbsp;&nbsp;</td>
+    <td>".$row["percentile"]."</td>
+</tr>
+
+<tr><td>Percentage of marks in +2&nbsp;&nbsp;</td>
+    <td>".$row["plustwo-marks"]."</td>
+</tr>
+
+<tr><td>Have you studied Sanskrit as optional language for Higher Secondary&nbsp;&nbsp;</td>
+    <td>".$row["isSanskrit"]."</td>
+</tr>
+
+<tr><td>Have you got Ayurvedic tradition (if yes give the details)&nbsp;&nbsp;</td>
+    <td>".$row["isAyurvedic"]."</td>
+</tr>
+<tr><td>Extra Curricular Activities&nbsp;&nbsp;</td>
+    <td>".$row["extra-activities"]."</td>
+</tr>   
+</table>
+<center>";
+
 
     
     $mpdf = new \Mpdf\Mpdf();
-    $mpdf->WriteHTML($content);
-    //$file=time().'.pdf';
-    $file="ABC".'.pdf';
+    $stylesheet = file_get_contents('pdf.css');
+    $mpdf->WriteHTML($stylesheet,1);
+    $mpdf->WriteHTML($content,2);
+    $file=time().'.pdf';
+    //$file="ABC".'.pdf';
     $mpdf->output($file,'D');
 
 ?>
