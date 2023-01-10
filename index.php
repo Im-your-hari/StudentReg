@@ -11,6 +11,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 include('config.php'); //Set up database connection...
 //include('https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css');
+
 ?>
 
 
@@ -55,8 +56,9 @@ include('config.php'); //Set up database connection...
 
 <body>
 
+
 <div class="container">
-<a href="#"><img src="#" alt="" width="350px" ></a><br><hr>
+<a href="index.php"><img src="nangelil.png" alt="" width="100%" height="100%"></a><br><hr>
 <a href="logout.php" class="btn btn-success"><i class="fa fa-lock"></i> Logout</a>
 <a href="register_student.php" class="btn btn-success"><i class="fa fa-lock"></i> Admission Form</a>
 <a href="export.php" class="btn btn-success pull-right"><i class="fa fa-download"></i> Export Data</a>
@@ -84,7 +86,9 @@ $row = mysqli_fetch_array($run_data);
 //echo "<h1>Image :: ".$row["image"]."</h1><br>";
 
 
-echo "<hr>";
+//echo "<hr>";
+if($row){
+//echo $row["neet-file"];
 echo "<section style="."background-color: #eee;".">
 <div class="."container py-5".">
   <div class="."row".">
@@ -160,7 +164,12 @@ echo "<section style="."background-color: #eee;".">
   </div>
 </div>
 </section>";
-
+}
+else{
+    echo "<h1>Welcome ".$_SESSION["username"]."</h1><br>";
+    
+    echo "Your'e not registered yet..!";
+}
 
 
 ?>

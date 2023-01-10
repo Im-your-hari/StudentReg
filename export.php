@@ -94,7 +94,8 @@
     $content = "<img src="."nangelil.png".">";
     //$content = "<center><img src="."clg.png"." style="."justify-content: center;"." height="."100"." width="."120"."><b>Nangelil Ayurveda Medical College Amano Kothamangalamm Nellikuzhi P.o., Ernakulam Dist Kerala State, India, PIN. 686691<br> Affiliated to Kerala University of Health Sciences, Thrissur Phone : O91 485 2822032, Principal +91 485 2817700, 0484-2978444, <br> Fax: 91 485 2822032 Email: nangelicollege@gmail.com/ collegedu@gmail.com, Website: www.nangelilayurvedamedicalcollege.org</b></center>";
     //$content = "<h1>Hai</h1>";
-    $content .="<br>".date("d M Y") . "<br>";
+    $content .="<br><br>".date("d M Y") . "<br>";
+    $content .=date("h:i:sa") . "<br>";
     $content .="<center><table border=1>";
     $content .="<tr> 
     <td>Application No</td>
