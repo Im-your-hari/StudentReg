@@ -168,7 +168,7 @@ echo "<section style="."background-color: #eee;".">
 else{
     echo "<h1>Welcome ".$_SESSION["username"]."</h1><br>";
     
-    echo "Your'e not registered yet..!";
+    echo "<marquee><h4>Your'e not registered yet..!<h4></marquee>";
 }
 
 
