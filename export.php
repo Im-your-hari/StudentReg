@@ -91,20 +91,21 @@
       </div>
     </div>
     </section></body>";*/
+    $random = random_int(1000,1099);
     $content = "<img src="."nangelil.png".">";
     //$content = "<center><img src="."clg.png"." style="."justify-content: center;"." height="."100"." width="."120"."><b>Nangelil Ayurveda Medical College Amano Kothamangalamm Nellikuzhi P.o., Ernakulam Dist Kerala State, India, PIN. 686691<br> Affiliated to Kerala University of Health Sciences, Thrissur Phone : O91 485 2822032, Principal +91 485 2817700, 0484-2978444, <br> Fax: 91 485 2822032 Email: nangelicollege@gmail.com/ collegedu@gmail.com, Website: www.nangelilayurvedamedicalcollege.org</b></center>";
     //$content = "<h1>Hai</h1>";
     $content .="<br><br>".date("d M Y") . "<br>";
-    $content .=date("h:i:sa") . "<br>";
-    $content .="<center><table border=1>";
-    $content .="<tr> 
-    <td>Application No</td>
-    <td>10023</td>
-</tr>
+    $content .=date("h:i:sa") . "<br><hr>";
+    $content .= "<b>Application No : 10023</b>";
+    //$content .= "images/".ltrim($row['image'])."";
+    $content .= "<br><br><img src="."images/".$row['image']." width="."120px"." height="."120px"." align="."right"."><br>";
+    $content .="<br><center><table border=1>";
+    $content .="
 <tr>
     <td>Student Registration Id</td>
     </td>
-     <td>2002-03-29</td>
+     <td>".$random."</td>
 </tr>
 <tr>
    <td> Student Name</td>
@@ -209,8 +210,8 @@
     $stylesheet = file_get_contents('pdf.css');
     $mpdf->WriteHTML($stylesheet,1);
     $mpdf->WriteHTML($content,2);
-    $file=time().'.pdf';
-    //$file="ABC".'.pdf';
+    //$file=time().'.pdf';
+    $file=$row["name"].'.pdf';
     $mpdf->output($file,'D');
 
 ?>
