@@ -13,6 +13,7 @@ $run_data = mysqli_query($con,$get_data);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -23,12 +24,13 @@ $run_data = mysqli_query($con,$get_data);
 
 
 
-    <table class="table">
+    <table class="table tables">
         <thead class="thead-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Registration Id</th>
             <th scope="col">Name</th>
+            <!--th scope="col">Username</th-->
             <th scope="col">Handle </th>
           </tr>
         </thead>
@@ -45,8 +47,8 @@ while($row = mysqli_fetch_array($run_data)){
             <th scope="."row"."".">".$i."</th>
             <td>NANG1202</td>
             <td>".$row['name']."</td>
-            <td>".$row['username']."</td>
-            <td><a href="."student_documents.php?username=".$row['username'].""."><button class="."btn-success"." name="."application".">Application</button></a></td>
+            <!--td>".$row['username']."</td-->
+            <td><a href="."student_documents.php?username=".$row['username'].""."><button class="."btn-success"." name="."application".">Download Application</button></a></td>
           </tr>";
     
 

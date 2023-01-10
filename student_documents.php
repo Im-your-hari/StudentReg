@@ -32,11 +32,11 @@
     $gd_sign_file = "gdsign/".$row['g-sign'];
     $gd_sign_file_name = "GuardianSign_".$row['g-sign'];
 
-    $hs_file = "hsfile/".$row['hs-file'];
-    $hs_file_name = "Plustwo_".$row['hs-file'];
+    $hs_file = "hsfile/".ltrim($row['hs-file']);
+    $hs_file_name = "".$row['hs-file'];
 
-    $neet_file = "neet/".$row['neet-file'];
-    $neet_file_name = "Neet_".$row['neet-file'];
+    $neet_file = "neet/".ltrim($row['neet-file']);
+    $neet_file_name = "".$row['neet-file'];
 
 
     //Zip file making
@@ -52,9 +52,10 @@
         $zip->addFile($stdsign_file,$stdsign_file_name);
         $zip->addFile($image_file,$image_file_name);
         $zip->addFile($gd_sign_file,$gd_sign_file_name);
-        $zip->addFile($hs_file, $hs_file_name);
+        $zip->addFile($hs_file,ltrim($hs_file_name));
+        //$zip->addFromString('new.txt',ltrim("".$hs_file_name." <br> ".$neet_file_name.""));
         //print $hs_file;
-        $zip->addFile($neet_file,$neet_file_name);//Add more files with paths
+        $zip->addFile($neet_file,ltrim($neet_file_name));//Add more files with paths
         
     }
     $zip->close();
