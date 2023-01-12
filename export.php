@@ -5,6 +5,7 @@
     require('vendor/autoload.php');
     require('config.php');
     include('include.php');
+    date_default_timezone_set("Asia/Kolkata");
 
     $get_data = "SELECT * FROM admission_data where username='".$_SESSION['username']."'";
     $run_data = mysqli_query($con,$get_data);
