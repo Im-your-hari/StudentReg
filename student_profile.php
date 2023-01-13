@@ -17,11 +17,28 @@
       //include("config.php");
 
 
+
+      /*if(isset($_POST["s-image"])){
+        $std_image = $_POST["s-image"]; 
+      }
+      if(isset($_POST["s-sign"])){
+        $s_sign = $_POST["s-sign"];
+      }
+      if(isset($_POST["g-sign"])){
+        $g_sign = $_POST["g-sign"];
+      }
+      if(isset($_POST["neet-file"])){
+        $neet_file = $_POST["neet-file"];
+      }
+      if(isset($_POST["hs-file"])){
+        $hs_file = $_POST["hs-file"];
+      }*/
+
       //Data only
       $std_name = $_POST["std_name"];
       //$std_age = $_POST["std_age"];
       $std_dob = $_POST["std_dob"];
-      $std_image = $_POST["s-image"];
+      //$std_image = $_POST["s-image"];
       $std_gender = $_POST["std_gender"];
       $std_email = $_POST["std_email"];
       $std_phoneNumber = $_POST["std_phoneNumber"];

@@ -97,7 +97,8 @@ echo "<section style="."background-color: #eee;".">
         <div class="."card-body text-center".">
           <img src="."./images/".$row["image"]."" ."
             class="."rounded-circle img-fluid" ."style="."width: 150px; height=150px".">
-          <h4 class="."my-3".">".$row["name"]."</h4>
+          <h3 class="."my-3".">".$row["name"]."</h3>
+          <h4 class="."my-3".">NANG".(1000+$row["regno"])."</h4>
           <p class="."text-muted mb-4".">@".$_SESSION["username"]."</p>
         </div>
       </div>

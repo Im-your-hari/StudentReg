@@ -1,3 +1,4 @@
+<?php error_reporting (E_ALL ^ E_NOTICE ^ E_WARNING); ?> 
 <?php
 include('config.php');
 
@@ -45,7 +46,7 @@ while($row = mysqli_fetch_array($run_data)){
     //echo $row['phone']."<br>";
     echo "<tr>
             <th scope="."row"."".">".$i."</th>
-            <td>NANG1202</td>
+            <td>NANG".(1000+$row["regno"])."</td>
             <td>".$row['name']."</td>
             <!--td>".$row['username']."</td-->
             <td><a href="."student_documents.php?username=".$row['username'].""."><button class="."btn-success"." name="."application".">Download Application</button></a></td>
