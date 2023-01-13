@@ -1,6 +1,12 @@
 <?php error_reporting (E_ALL ^ E_NOTICE ^ E_WARNING); ?> 
 <?php
 include('config.php');
+session_start();
+if($_SESSION["adminlogin"] != True){
+  header("location: admin_login.php");
+}
+
+
 
 $get_data = "SELECT * FROM admission_data";
 $run_data = mysqli_query($con,$get_data);
