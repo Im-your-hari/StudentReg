@@ -92,13 +92,13 @@
       </div>
     </div>
     </section></body>";*/
-    $random = random_int(1000,1099);
-    $content = "<img src="."nangelil.png".">";
+    //$random = random_int(1000,1099);
+    $content = "<img src="."nang.png".">";
     //$content = "<center><img src="."clg.png"." style="."justify-content: center;"." height="."100"." width="."120"."><b>Nangelil Ayurveda Medical College Amano Kothamangalamm Nellikuzhi P.o., Ernakulam Dist Kerala State, India, PIN. 686691<br> Affiliated to Kerala University of Health Sciences, Thrissur Phone : O91 485 2822032, Principal +91 485 2817700, 0484-2978444, <br> Fax: 91 485 2822032 Email: nangelicollege@gmail.com/ collegedu@gmail.com, Website: www.nangelilayurvedamedicalcollege.org</b></center>";
     //$content = "<h1>Hai</h1>";
     $content .="<br><br>".date("d M Y") . "<br>";
     $content .=date("h:i:sa") . "<br><hr>";
-    $content .= "<b>Application No : 10023</b>";
+    $content .= "<b>Application No : ".(1000+$row["regno"])."</b>";
     //$content .= "images/".ltrim($row['image'])."";
     $content .= "<br><br><img src="."images/".$row['image']." width="."120px"." height="."120px"." align="."right"."><br>";
     $content .="<br><center><table border=1>";
@@ -106,7 +106,7 @@
 <tr>
     <td>Student Registration Id</td>
     </td>
-     <td>".$random."</td>
+     <td>NANG".(1000+$row["regno"])."</td>
 </tr>
 <tr>
    <td> Student Name</td>
@@ -202,8 +202,17 @@
 <tr><td>Extra Curricular Activities&nbsp;&nbsp;</td>
     <td>".$row["extra-activities"]."</td>
 </tr>   
-</table>
-<center>";
+</table><br><hr>
+<h3><u>DECLARATION BY APPLICANT<u></h3>
+<p>I <b>".$row["name"]."</b>, do hereby declare that the particulars given above are true to my knowledge and belief and I further declare that, if selected I shall abide by the rules and regulations of Nangelil Ayurveda Medical College and the University.</p>
+</center>
+<img src="."stdsign/".$row['s-sign']." width="."120px"." height="."60px"." align="."right"."><br>
+<center><h3><u>VERIFICATION AND UNDERTAKING BY PARENT/GUARDIAN</u></h3>
+<p>I <b>".$row["guadian"]."</b>,Parent/Guardian of the applicant do hereby certify that I have personally verified the particulars provided by the applicant and found correct to the best of my knowledge and belief. I undertake to meetall the expense for admission and studies of
+applicant.</p>
+<img src="."gdsign/".$row['g-sign']." width="."120px"." height="."60px"." align="."right".">
+</center>
+";
 
 
     

@@ -57,8 +57,9 @@ include('config.php'); //Set up database connection...
 <body>
 
 
-<div class="container">
-<a href="index.php"><img src="nangelil.png" alt="" width="100%" height="100%"></a><br><hr>
+<div class="container py-5 col-sm">
+
+<a href="index.php"><img src="nang.png"></a><br><hr>
 <a href="logout.php" class="btn btn-success"><i class="fa fa-lock"></i> Logout</a>
 <a href="register_student.php" class="btn btn-success"><i class="fa fa-lock"></i> Admission Form</a>
 <a href="export.php" class="btn btn-success pull-right"><i class="fa fa-download"></i> Export Data</a>
